@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chương trình quản lý sinh viên</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            width: 90%;
+            margin: 0 auto;
+            background-color: #d3d3d3;
+        }
+        .top {
+            width: 100%;
+            height: 120px;
+            background-image: url('https://cdn-media.sforum.vn/storage/app/media/ctvseo_15/Background%20xanh/background-xanh-2.jpg');
+            background-position: center;
+            color: Green;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            float: left;
+        }
+        .top h2 { margin: 5px 0; font-size: 24px; }
+        .left {
+            width: 20%;
+            padding: 30px;
+            float: left;
+            background-color:white;
+            min-height: 500px;
+        }
+        .left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .left li {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 15px;
+        }
+        .left li a {
+            text-decoration: none;
+            color: #blue;
+            font-weight: bold;
+            display: block;
+        }
+        .left li:hover {
+            background-color: red;
+        }
+        .center {
+            width: 60%;
+            float: left;
+            background-color: white;
+            padding: 15px;
+            min-height: 500px;
+            border-left: 1px solid #ffcc99;
+            border-right: 1px solid #ffcc99;
+        }
+        .table-form, .table-data {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .header-blue {
+            background-color:#666666;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 8px;
+        }
+        .table-form td {
+            padding: 8px;
+            border: 1px solid blue;
+        }
+        .table-form input[type="text"] {
+            width: 100%;
+            padding: 4px;
+        }
+        .table-data th, .table-data td {
+            border: 1px solid blue;
+            padding: 8px;
+            text-align: left;
+        }
+        .table-data th {
+            background-color: #f9f9f9;
+        }
+        .right {
+            width: 20%;
+            float: left;
+            background-color: #ffff99;
+            padding: 10px;
+            min-height: 500px;
+            font-size: 14px;
+        }
+        .img-box {
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .right a {
+            color: #3498db;
+            display: block;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        .bottom {
+            width: 100%;
+            height: 100px;
+            background-color: #C0C0C0;
+            float: left;
+            clear: both;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h2>CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN</h2>
+    </div>
+    <div class="left">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Quản lý sinh viên</a></li>
+            <li><a href="#">Quản lý điểm</a></li>
+            <li><a href="#">Quản lý lớp học</a></li>
+            <li><a href="#">Quản lý khoa</a></li>
+            <li><a href="#">Quản lý người dùng</a></li>
+            <li><a href="#">Chức năng khác</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <table class="table-form">
+            <tr>
+                <td colspan="2" class="header-blue">THÊM SINH VIÊN</td>
+            </tr>
+            <tr>
+                <td width="30%">Mã sinh viên</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Hình ảnh</td>
+                <td>
+                    <input type="text" style="width: 40%;">
+                    <button>Browse...</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button>Add</button>
+                    <button>Update</button>
+                    <button>Save</button>
+                </td>
+            </tr>
+        </table>
+        <table class="table-data">
+            <tr>
+                <td colspan="5" class="header-blue">THÔNG TIN SINH VIÊN</td>
+            </tr>
+            <tr>
+                <th>STT</th>
+                <th>Mã SV</th>
+                <th>Họ và tên</th>
+                <th>Ngày sinh</th>
+                <th>Hình ảnh </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>TT01</td>
+                <td>Bui Khanh </td>
+                <td>3/7/2011</td>
+                <td>buikhanh.jpg</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>TH02</td>
+                <td>Vu Thi </td>
+                <td>5/12/2009</td>
+                <td>vuthi.jpg</td>
+            </tr>
+        </table>
+    </div>
+    <div class="right">
+        <div class="img-box">
+            <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/hoc_html_css_0_7a993e17f2.jpg" width="100%">
+           <img src="https://caodang.fpt.edu.vn/wp-content/uploads/2024/06/FPT-Polytechnic-HP-HTML-CSS-JavaScript-10.jpg" width="100% px"> 
+             <p>Lớp chuyên đề về HTML và CSS trang bị kiến thức cơ bản về xây dựng cấu trúc và định dạng trang web.</p>
+            <a href="#">Thông báo về lịch thi học kỳ</a><br>
+            <a href="#">Nhịp sống trẻ</a> <br><br>
+        </div>
+    </div>
+    <div class="bottom">
+   <br>Khoa CNTT <br><br>
+   Email: khcntt@vui.edu.vn
+</div>
+</body>
+</html>
